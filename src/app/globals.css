@@ -1,14 +1,29 @@
-@import 'tailwindcss';
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-light: #EFF6FF;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-sidebar: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-heading: #0F172A;
+  --color-text: #334155;
+  --color-muted: #64748B;
+  --color-disabled: #94A3B8;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  --color-info: #2563EB;
+  --background: var(--color-background);
+  --foreground: var(--color-text);
+  --text-primary: var(--color-heading);
+  --text-secondary: var(--color-muted);
+  --button-primary-hover: var(--color-primary-hover);
+  --button-secondary-hover: var(--color-primary-light);
+  --button-secondary-border: var(--color-border);
+  color-scheme: light;
 }
 
 html {
@@ -23,6 +38,7 @@ body {
 
 body {
   min-height: 100%;
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   color: var(--foreground);
@@ -43,8 +59,12 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }

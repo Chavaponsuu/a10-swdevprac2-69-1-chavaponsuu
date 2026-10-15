@@ -11,6 +11,11 @@ interface VenueItem {
     __v: number,
     id: string
   }
+
+  interface VenueDetailJson {
+    success: boolean,
+    data: VenueItem
+  }
   
   interface VenueJson {
     success: boolean,
